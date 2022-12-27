@@ -25,6 +25,18 @@ class DeskStoreRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255'
+            // 'name.required' => 'test massege'
+        ];
+    }
+    /**
+    * Get the error messages for the defined validation rules.
+    *
+    * @return array
+    */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Please enter the List name, this fild is required',
         ];
     }
 }
